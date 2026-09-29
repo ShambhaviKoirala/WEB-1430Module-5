@@ -1,0 +1,96 @@
+/* Secret agent terminal in Weber State purple */
+:root {
+  --ws-purple: #492365;
+  --ws-glow: #b98ee0;
+  --bg: #0d0812;
+  --panel: #170f20;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Consolas, monospace;
+  background:
+    repeating-linear-gradient(0deg, rgba(185, 142, 224, 0.04) 0 1px, transparent 1px 3px),
+    var(--bg);
+  color: #e6dcef;
+  min-height: 100vh;
+}
+
+#mission-container,
+h2,
+#log {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mission-container {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--ws-purple);
+  box-shadow: 0 0 20px rgba(73, 35, 101, 0.8);
+  margin-top: 2rem;
+  padding: 0 1.5rem 1rem;
+}
+
+/* ponytail: pure CSS stamp, no markup needed */
+#mission-container::before {
+  content: "TOP SECRET";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #d33;
+  border: 2px solid #d33;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transform: rotate(8deg);
+  opacity: 0.8;
+}
+
+h1 {
+  color: var(--ws-glow);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px var(--ws-glow);
+  border-bottom: 1px dashed var(--ws-purple);
+  padding: 1.2rem 0 0.6rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+#mission-container ul {
+  padding: 0;
+}
+
+#mission-container li {
+  list-style: none;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--ws-glow);
+  background: rgba(73, 35, 101, 0.35);
+}
+
+#mission-container li::before {
+  content: "▸ ";
+  color: var(--ws-glow);
+}
+
+h2 {
+  color: var(--ws-glow);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 1.5rem;
+}
+
+h2::before {
+  content: "> ";
+}
+
+#log {
+  color: #7fdc9a;
+  font-size: 0.8rem;
+  padding: 0 1.5rem 2rem 3rem;
+}
